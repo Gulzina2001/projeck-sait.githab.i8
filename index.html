@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Light Switch</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    background: black;
+}
+
+button {
+    padding: 20px 40px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="toggleLight()">Свет: ВЫКЛ</button>
+
+<script>
+let isOn = false;
+
+function toggleLight(){
+    isOn = !isOn;
+
+    if(isOn){
+        document.body.style.background = "white";
+        document.querySelector("button").innerText = "Свет: ВКЛ";
+    } else {
+        document.body.style.background = "black";
+        document.querySelector("button").innerText = "Свет: ВЫКЛ";
+    }
+}
+</script>
+
+</body>
+</html>
